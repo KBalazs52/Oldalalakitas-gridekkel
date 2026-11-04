@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  color: white;
+  display: grid;
+
+  grid-template-areas:
+    "A A B C"
+    "D E E C"
+    "F E E G"
+    "H H H H";
+}
+
+div {
+  grid-template-columns: 10vw 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+  gap: 10px;
+}
+
+h1 {
+  color: black;
+}
+
+#A {
+  grid-area: A;
+  background-color: red;
+}
+
+#B {
+  grid-area: B;
+  background-color: blue;
+}
+
+#C {
+  grid-area: C;
+  background-color: green;
+}
+
+#D {
+  grid-area: D;
+  background-color: orangered;
+}
+
+#E {
+  grid-area: E;
+  background-color: blueviolet;
+}
+
+#F {
+  grid-area: F;
+  background-color: cadetblue;
+}
+
+#G {
+  grid-area: G;
+  background-color: yellow;
+}
+
+#H {
+  grid-area: H;
+  background-color: brown;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "ar"
+      "as"
+      "f";
+  }
+}

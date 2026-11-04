@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "h h"
+    "n n"
+    "s as"
+    "ar as"
+    "f f";
+}
+
+header {
+  grid-area: h;
+  background-color: aqua;
+}
+
+nav {
+  grid-area: n;
+  background-color: greenyellow;
+}
+
+section {
+    grid-area: s;
+    background-color: chocolate;
+}
+
+article {
+  grid-area: ar;
+  background-color: rgb(24, 57, 247);
+}
+
+aside {
+  grid-area: as;
+  background-color: blueviolet;
+}
+
+footer {
+  grid-area: f;
+  background-color: aqua;
+}
+
+@media screen and (max-width:600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "ar"
+      "as"
+      "f";
+  }
+}
